@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Portfolio of Supriyo Dhar, Full Stack Software Developer." />
+    <title>@ViewData["Title"] - Supriyo Dhar</title>
+    <script type="importmap"></script>
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/SupriyoPortfolio.styles.css" asp-append-version="true" />
+</head>
+<body>
+    <header class="site-header" data-site-header>
+        <nav class="site-nav" aria-label="Primary navigation">
+            <a class="brand" href="#home" aria-label="Supriyo Dhar home">
+                <span>Supriyo</span><span>Dhar</span>
+            </a>
+
+            <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-menu" data-nav-toggle>
+                <span class="sr-only">Toggle navigation</span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <div class="nav-links" id="primary-menu" data-nav-menu>
+                <a href="#home" class="nav-link is-active">Home</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#education" class="nav-link">Education</a>
+                <a href="#experience" class="nav-link">Experience</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#awards" class="nav-link">Awards</a>
+                <a href="#contact" class="nav-link">Contact</a>
+                <button class="theme-toggle" type="button" aria-label="Toggle theme" data-theme-toggle>
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M20.6 14.5A7.4 7.4 0 0 1 9.5 3.4 8.9 8.9 0 1 0 20.6 14.5Z" />
+                    </svg>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main role="main">
+        @RenderBody()
+    </main>
+
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

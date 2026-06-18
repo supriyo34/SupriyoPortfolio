@@ -1,0 +1,500 @@
+@{
+    ViewData["Title"] = "Portfolio";
+}
+
+<svg class="icon-sprite" aria-hidden="true">
+    <symbol id="icon-download" viewBox="0 0 24 24">
+        <path d="M12 3v11m0 0 4-4m-4 4-4-4M5 17v2a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-2" />
+    </symbol>
+    <symbol id="icon-arrow" viewBox="0 0 24 24">
+        <path d="M7 17 17 7m0 0H9m8 0v8" />
+    </symbol>
+    <symbol id="icon-location" viewBox="0 0 24 24">
+        <path d="M12 21s7-5.1 7-11a7 7 0 1 0-14 0c0 5.9 7 11 7 11Z" />
+        <circle cx="12" cy="10" r="2.5" />
+    </symbol>
+    <symbol id="icon-phone" viewBox="0 0 24 24">
+        <path d="M22 16.9v3a2 2 0 0 1-2.2 2A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.6a2 2 0 0 1-.5 2.1L8 9.7a16 16 0 0 0 6.3 6.3l1.3-1.2a2 2 0 0 1 2.1-.5c.8.3 1.7.5 2.6.6a2 2 0 0 1 1.7 2Z" />
+    </symbol>
+    <symbol id="icon-mail" viewBox="0 0 24 24">
+        <path d="M4 4h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2Z" />
+        <path d="m22 7-10 6L2 7" />
+    </symbol>
+    <symbol id="icon-linkedin" viewBox="0 0 24 24">
+        <path d="M8 11v8M8 8v.1M12 19v-8m0 3.5c0-2.3 5-3 5 1.2V19M4 4h16v16H4Z" />
+    </symbol>
+    <symbol id="icon-github" viewBox="0 0 24 24">
+        <path d="M15 22v-4a4.8 4.8 0 0 0-1.3-3.7c4.4-.5 6.3-2.2 6.3-5A5.4 5.4 0 0 0 18.5 5c.2-.8.2-2-.4-3 0 0-1.2-.4-4 1.5a13.4 13.4 0 0 0-7.2 0C4.1 1.6 2.9 2 2.9 2c-.6 1-.6 2.2-.4 3A5.4 5.4 0 0 0 1 9.3c0 2.8 1.9 4.5 6.3 5A4.8 4.8 0 0 0 6 18v4" />
+        <path d="M6 19c-2 .6-3.5 0-4.5-2" />
+    </symbol>
+    <symbol id="icon-code" viewBox="0 0 24 24">
+        <path d="m9 18-6-6 6-6m6 12 6-6-6-6M14 4l-4 16" />
+    </symbol>
+    <symbol id="icon-grid" viewBox="0 0 24 24">
+        <path d="M4 4h6v6H4Zm10 0h6v6h-6ZM4 14h6v6H4Zm10 0h6v6h-6Z" />
+    </symbol>
+    <symbol id="icon-database" viewBox="0 0 24 24">
+        <ellipse cx="12" cy="5" rx="8" ry="3" />
+        <path d="M4 5v14c0 1.7 3.6 3 8 3s8-1.3 8-3V5M4 12c0 1.7 3.6 3 8 3s8-1.3 8-3" />
+    </symbol>
+    <symbol id="icon-users" viewBox="0 0 24 24">
+        <path d="M16 21v-2a4 4 0 0 0-4-4H7a4 4 0 0 0-4 4v2m10-10a4 4 0 1 1-8 0 4 4 0 0 1 8 0Zm8 10v-2a4 4 0 0 0-3-3.9M16 3.1a4 4 0 0 1 0 7.8" />
+    </symbol>
+    <symbol id="icon-briefcase" viewBox="0 0 24 24">
+        <path d="M10 6V5a2 2 0 0 1 2-2h0a2 2 0 0 1 2 2v1m-9 0h14a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2Z" />
+        <path d="M3 12h18" />
+    </symbol>
+    <symbol id="icon-trophy" viewBox="0 0 24 24">
+        <path d="M8 21h8m-6-4h4m-6-4a6 6 0 0 0 8 0V3H8Zm8-8h4a4 4 0 0 1-4 4M8 5H4a4 4 0 0 0 4 4" />
+    </symbol>
+    <symbol id="icon-book" viewBox="0 0 24 24">
+        <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20M4 4.5A2.5 2.5 0 0 1 6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5Z" />
+    </symbol>
+    <symbol id="icon-send" viewBox="0 0 24 24">
+        <path d="m22 2-7 20-4-9-9-4Z" />
+        <path d="M22 2 11 13" />
+    </symbol>
+    <symbol id="icon-leetcode" viewBox="0 0 24 24">
+        <path d="M16 18.5 13 21.5a3.5 3.5 0 0 1-5 0L3.5 17a3.5 3.5 0 0 1 0-5L12 3.5" />
+        <path d="m9 15 7-7 4 4-4 4H8" />
+    </symbol>
+</svg>
+
+<section class="hero section" id="home">
+    <div class="container hero-grid">
+        <div class="hero-copy reveal">
+            <p class="eyebrow">Full Stack Software Developer</p>
+            <h1>Hi, I&apos;m <span>Supriyo Dhar</span></h1>
+            <h2>Full Stack Software Developer</h2>
+            <p class="hero-summary">
+                I build enterprise web and mobile solutions that simplify complex processes, improve efficiency,
+                and deliver real business impact.
+            </p>
+
+            <div class="quick-links" aria-label="Contact details">
+                <a href="https://maps.google.com/?q=Pune%2C%20Maharashtra%2C%20India" target="_blank" rel="noreferrer">
+                    <svg><use href="#icon-location"></use></svg>
+                    Pune, Maharashtra, India
+                </a>
+                <a href="tel:6000178511">
+                    <svg><use href="#icon-phone"></use></svg>
+                    6000178511
+                </a>
+                <a href="mailto:supriyodhar3S@gmail.com">
+                    <svg><use href="#icon-mail"></use></svg>
+                    supriyodhar3S@gmail.com
+                </a>
+                <a href="https://www.linkedin.com/in/supriyo-dhar-031a6920a/" target="_blank" rel="noreferrer">
+                    <svg><use href="#icon-linkedin"></use></svg>
+                    linkedin.com/in/supriyo-dhar-031a6920a
+                </a>
+                <a href="https://github.com/supriyo34" target="_blank" rel="noreferrer">
+                    <svg><use href="#icon-github"></use></svg>
+                    github.com/supriyo34
+                </a>
+                <a href="https://leetcode.com/u/supriyodhar35/" target="_blank" rel="noreferrer">
+                    <svg><use href="#icon-leetcode"></use></svg>
+                    leetcode.com/u/supriyodhar35
+                </a>
+            </div>
+
+            <div class="hero-actions">
+                <button class="btn btn-primary" type="button" data-print-resume>
+                    <svg><use href="#icon-download"></use></svg>
+                    Download Resume
+                </button>
+                <a class="btn btn-ghost" href="#contact">
+                    Let&apos;s Connect
+                    <svg><use href="#icon-arrow"></use></svg>
+                </a>
+            </div>
+
+            <div class="social-row" aria-label="Social links">
+                <a href="https://www.linkedin.com/in/supriyo-dhar-031a6920a/" target="_blank" rel="noreferrer" aria-label="LinkedIn">
+                    <svg><use href="#icon-linkedin"></use></svg>
+                </a>
+                <a href="https://github.com/supriyo34" target="_blank" rel="noreferrer" aria-label="GitHub">
+                    <svg><use href="#icon-github"></use></svg>
+                </a>
+                <a href="https://leetcode.com/u/supriyodhar35/" target="_blank" rel="noreferrer" aria-label="LeetCode">
+                    <svg><use href="#icon-leetcode"></use></svg>
+                </a>
+                <a href="mailto:supriyodhar3S@gmail.com" aria-label="Email">
+                    <svg><use href="#icon-mail"></use></svg>
+                </a>
+            </div>
+        </div>
+
+        <div class="hero-visual reveal" aria-label="Portrait and portfolio statistics">
+            <div class="portrait-card">
+                <span class="experience-badge"><strong>2+</strong>Years<br />Experience</span>
+                <img src="~/img/supriyo-dhar.png" asp-append-version="true" alt="Supriyo Dhar" />
+                <div class="stat-strip">
+                    <span><strong>20+</strong>Projects</span>
+                    <span><strong>2+</strong>Years Exp.</span>
+                    <span><strong>100%</strong>Commitment</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <a class="scroll-cue" href="#about" aria-label="Scroll to about section"></a>
+</section>
+
+<section class="section" id="about">
+    <div class="container">
+        <div class="section-heading reveal">
+            <h2>About Me</h2>
+        </div>
+
+        <div class="about-grid">
+            <div class="about-copy reveal">
+                <p>
+                    I&apos;m a Full Stack .NET Developer with a strong foundation in building enterprise applications
+                    that drive efficiency, transparency, and productivity. I enjoy solving complex problems,
+                    translating business requirements into robust solutions, and continuously learning new technologies.
+                </p>
+
+                <dl class="info-panel">
+                    <div>
+                        <dt>Name:</dt>
+                        <dd>Supriyo Dhar</dd>
+                    </div>
+                    <div>
+                        <dt>Role:</dt>
+                        <dd>Full Stack Software Developer</dd>
+                    </div>
+                    <div>
+                        <dt>Location:</dt>
+                        <dd>Pune, Maharashtra, India</dd>
+                    </div>
+                    <div>
+                        <dt>Phone:</dt>
+                        <dd><a href="tel:6000178511">6000178511</a></dd>
+                    </div>
+                    <div>
+                        <dt>Email:</dt>
+                        <dd><a href="mailto:supriyodhar3S@gmail.com">supriyodhar3S@gmail.com</a></dd>
+                    </div>
+                    <div>
+                        <dt>LinkedIn:</dt>
+                        <dd><a href="https://www.linkedin.com/in/supriyo-dhar-031a6920a/" target="_blank" rel="noreferrer">linkedin.com/in/supriyo-dhar-031a6920a</a></dd>
+                    </div>
+                    <div>
+                        <dt>GitHub:</dt>
+                        <dd><a href="https://github.com/supriyo34" target="_blank" rel="noreferrer">github.com/supriyo34</a></dd>
+                    </div>
+                    <div>
+                        <dt>LeetCode:</dt>
+                        <dd><a href="https://leetcode.com/u/supriyodhar35/" target="_blank" rel="noreferrer">leetcode.com/u/supriyodhar35</a></dd>
+                    </div>
+                </dl>
+            </div>
+
+            <div class="about-photo reveal">
+                <img src="~/img/supriyo-dhar.png" asp-append-version="true" alt="Supriyo Dhar portrait" />
+            </div>
+        </div>
+
+        <div class="section-heading compact reveal">
+            <h3>What I Do</h3>
+        </div>
+        <div class="service-grid">
+            <article class="feature-card reveal">
+                <span class="card-icon violet"><svg><use href="#icon-code"></use></svg></span>
+                <h4>Full Stack Development</h4>
+                <p>Building scalable web and mobile applications using .NET ecosystem and modern tools.</p>
+            </article>
+            <article class="feature-card reveal">
+                <span class="card-icon blue"><svg><use href="#icon-grid"></use></svg></span>
+                <h4>Enterprise Solutions</h4>
+                <p>Creating workflow-driven systems that streamline operations and improve business outcomes.</p>
+            </article>
+            <article class="feature-card reveal">
+                <span class="card-icon amber"><svg><use href="#icon-database"></use></svg></span>
+                <h4>Clean Architecture</h4>
+                <p>Designing maintainable and secure applications with service-layer and repository patterns.</p>
+            </article>
+            <article class="feature-card reveal">
+                <span class="card-icon green"><svg><use href="#icon-users"></use></svg></span>
+                <h4>Collaborative Approach</h4>
+                <p>Working closely with stakeholders in agile teams to deliver real business value.</p>
+            </article>
+        </div>
+    </div>
+</section>
+
+<section class="section" id="skills">
+    <div class="container">
+        <div class="section-heading reveal">
+            <h2>Core Technical Skills</h2>
+        </div>
+
+        <div class="skills-grid">
+            <article class="skill-card reveal">
+                <span class="skill-icon blue"><svg><use href="#icon-code"></use></svg></span>
+                <h3>Backend</h3>
+                <p>C#, .NET Core, .NET Framework, ASP.NET MVC, Web API, REST APIs, Entity Framework, service-layer architecture, authentication-ready API design.</p>
+            </article>
+            <article class="skill-card reveal">
+                <span class="skill-icon green"><svg><use href="#icon-grid"></use></svg></span>
+                <h3>Frontend</h3>
+                <p>Razor Views, Blazor WebAssembly, .NET MAUI Hybrid, JavaScript, HTML5, CSS3, Bootstrap, MudBlazor, responsive UI, modal workflows.</p>
+            </article>
+            <article class="skill-card reveal">
+                <span class="skill-icon violet"><svg><use href="#icon-database"></use></svg></span>
+                <h3>Database</h3>
+                <p>SQL Server, relational database design, stored procedures, SQL queries, data validation, reporting support, performance-aware data access.</p>
+            </article>
+            <article class="skill-card reveal large">
+                <span class="skill-icon amber"><svg><use href="#icon-briefcase"></use></svg></span>
+                <h3>Enterprise Development</h3>
+                <p>Workflow automation, approval and sign-off flows, document linking, search and filter screens, QR scan integration, role-based screens, SSO-ready apps.</p>
+            </article>
+            <article class="skill-card reveal large">
+                <span class="skill-icon red"><svg><use href="#icon-code"></use></svg></span>
+                <h3>Tools &amp; Practices</h3>
+                <p>Git, debugging, API integration, clean code, maintainable architecture, agile collaboration, requirements analysis, production support.</p>
+            </article>
+        </div>
+    </div>
+</section>
+
+<section class="section education-section" id="education">
+    <div class="container narrow">
+        <div class="section-heading reveal">
+            <h2>Education</h2>
+        </div>
+
+        <div class="education-list">
+            <article class="education-card reveal">
+                <span class="education-icon"><svg><use href="#icon-book"></use></svg></span>
+                <div>
+                    <h3>Bachelor of Technology (B.Tech), Electronics and Communications Engineering</h3>
+                    <p class="muted">Symbiosis Institute of Technology</p>
+                    <p>Sep 2020 - Jun 2024</p>
+                </div>
+            </article>
+            <article class="education-card reveal">
+                <span class="education-icon"><svg><use href="#icon-book"></use></svg></span>
+                <div>
+                    <h3>Higher Secondary</h3>
+                    <p class="muted">Cotton College</p>
+                    <p>Jun 2018 - Jul 2020</p>
+                </div>
+            </article>
+        </div>
+    </div>
+</section>
+
+<section class="section" id="experience">
+    <div class="container">
+        <div class="section-heading reveal">
+            <h2>Professional Experience</h2>
+        </div>
+
+        <div class="timeline">
+            <article class="timeline-item reveal">
+                <div class="timeline-date">Apr 2026<br /><span>Present</span></div>
+                <div class="timeline-card">
+                    <h3>Full Stack Software Developer - Holtec Asia, Pune City</h3>
+                    <ul>
+                        <li>Develop and enhance internal enterprise applications supporting quality, inventory, manufacturing, and operational workflows across business teams.</li>
+                        <li>Build full-stack features using C#, .NET Core, ASP.NET MVC, Razor, Blazor, Web API, Entity Framework, SQL Server, JavaScript, HTML, CSS, Bootstrap, MudBlazor, and Git.</li>
+                        <li>Convert complex business processes into reliable modules with dynamic validation, role-aware workflows, searchable data views, structured forms, and maintainable service-layer patterns.</li>
+                        <li>Improve user experience through modern card-based layouts, tabbed screens, filters, dialogs, loaders, responsive design, and clearer process visibility.</li>
+                        <li>Partner with stakeholders to gather requirements, troubleshoot production issues, refine workflows, and deliver business-ready enhancements with clean, testable code.</li>
+                    </ul>
+                </div>
+            </article>
+
+            <article class="timeline-item reveal">
+                <div class="timeline-date">Jun 2024<br /><span>Mar 2026</span></div>
+                <div class="timeline-card">
+                    <h3>Graduate Engineer Trainee, Software Development - Holtec Asia, Pune City</h3>
+                    <ul>
+                        <li>Contributed to enterprise applications for condition reports, nonconformance reports, issue reports, component completion reports, corrective actions, inventory tracking, and transfer workflows.</li>
+                        <li>Implemented multi-step forms, conditional questionnaire logic, approval and sign-off workflows, action-item tracking, document linking, audit-friendly records, and structured data-entry screens.</li>
+                        <li>Designed and consumed REST APIs through service-layer architecture, improving separation between UI components, business logic, repositories, and data access.</li>
+                    </ul>
+                </div>
+            </article>
+
+            <article class="timeline-item reveal">
+                <div class="timeline-date">Jan 2024<br /><span>Jun 2024</span></div>
+                <div class="timeline-card">
+                    <h3>Intellectual Property Research and Documentation Intern - StratJuris Law Partners</h3>
+                    <ul>
+                        <li>Prepared technical documentation and research notes for emerging technology areas, supporting intellectual property review and patent-related decision-making.</li>
+                        <li>Performed patent and prior-art searches to identify whether similar inventions or technologies already existed, helping evaluate novelty and technical positioning.</li>
+                        <li>Organized findings into clear, structured documentation for review by legal and technical stakeholders, strengthening analytical writing and research accuracy.</li>
+                        <li>Developed strong attention to detail, requirement interpretation, domain research, and documentation skills transferable to software analysis and enterprise delivery.</li>
+                    </ul>
+                </div>
+            </article>
+        </div>
+
+        <div class="center-action reveal">
+            <a class="btn btn-ghost" href="#projects">
+                View Full Experience
+                <svg><use href="#icon-arrow"></use></svg>
+            </a>
+        </div>
+    </div>
+</section>
+
+<section class="section" id="projects">
+    <div class="container narrow">
+        <div class="section-heading reveal">
+            <h2>High-Impact Project Experience</h2>
+        </div>
+
+        <div class="project-list">
+            <article class="project-row reveal">
+                <span class="project-icon"><svg><use href="#icon-briefcase"></use></svg></span>
+                <div>
+                    <h3>Issue Report, CR/NCR and Sign-Off Workflow Systems</h3>
+                    <p>Built and enhanced quality workflow modules with multi-stage approvals, conditional validation, manual review logic, corrective action tracking, document linking, and structured audit trails.</p>
+                </div>
+                <span class="row-arrow" aria-hidden="true">></span>
+            </article>
+            <article class="project-row reveal">
+                <span class="project-icon"><svg><use href="#icon-database"></use></svg></span>
+                <div>
+                    <h3>Inventory, MIR/MIC and Material Tracking Applications</h3>
+                    <p>Developed interfaces and APIs for QR scanning, location updates, warehouse hierarchy selection, transfer requests, PO/MIR visibility, and searchable inventory screens.</p>
+                </div>
+                <span class="row-arrow" aria-hidden="true">></span>
+            </article>
+            <article class="project-row reveal">
+                <span class="project-icon"><svg><use href="#icon-code"></use></svg></span>
+                <div>
+                    <h3>.NET MAUI Hybrid and Blazor Modernization</h3>
+                    <p>Supported mobile-friendly enterprise workflows using .NET MAUI, Blazor components, service-based API calls, and SSO-focused architecture.</p>
+                </div>
+                <span class="row-arrow" aria-hidden="true">></span>
+            </article>
+            <article class="project-row reveal">
+                <span class="project-icon"><svg><use href="#icon-users"></use></svg></span>
+                <div>
+                    <h3>UI/UX Modernization</h3>
+                    <p>Created full-stack UI patterns including clean Bootstrap cards, MudBlazor tables, dialogs, tabs, loaders, filters, previews, and responsive forms.</p>
+                </div>
+                <span class="row-arrow" aria-hidden="true">></span>
+            </article>
+        </div>
+    </div>
+</section>
+
+<section class="section" id="awards">
+    <div class="container narrow">
+        <div class="section-heading reveal">
+            <h2>Awards &amp; Publications</h2>
+        </div>
+
+        <article class="award-card reveal">
+            <span class="award-icon"><svg><use href="#icon-trophy"></use></svg></span>
+            <div>
+                <h3>Citation for Notable Contribution - Digital Transformation and Operational Excellence</h3>
+                <p class="muted">Holtec International, Dec 2025</p>
+                <p>Recognized for ownership, problem-solving, continuous learning, and development of practical software solutions that support quality, inventory, operational workflows, transparency, and digital transformation.</p>
+                <a class="award-link" href="@Url.Content("~/files/citation-notable-contribution-supriyo-dhar.pdf")" target="_blank" rel="noreferrer">
+                    <svg><use href="#icon-download"></use></svg>
+                    View Citation PDF
+                </a>
+            </div>
+            <span class="medal" aria-hidden="true"></span>
+        </article>
+
+        <div class="publication-heading reveal">
+            <span><svg><use href="#icon-book"></use></svg></span>
+            <h3>Publications</h3>
+        </div>
+        <div class="publication-list">
+            <a class="publication-card reveal" href="https://ieeexplore.ieee.org/document/10468733" target="_blank" rel="noreferrer">
+                <div>
+                    <h3>Biomedical Image Classification using Deep Reinforcement Learning</h3>
+                    <p>IEEE Conference Publication, 2024</p>
+                </div>
+                <span class="row-arrow" aria-hidden="true">></span>
+            </a>
+            <a class="publication-card reveal" href="https://ieeexplore.ieee.org/document/10307502" target="_blank" rel="noreferrer">
+                <div>
+                    <h3>Deep Learning Based Biomedical Image Analysis</h3>
+                    <p>IEEE Conference Publication</p>
+                </div>
+                <span class="row-arrow" aria-hidden="true">></span>
+            </a>
+        </div>
+    </div>
+</section>
+
+<section class="section contact-section" id="contact">
+    <div class="container contact-grid">
+        <div class="contact-copy reveal">
+            <div class="section-heading">
+                <h2>Let&apos;s Work Together</h2>
+            </div>
+            <div class="contact-details">
+                <a href="https://maps.google.com/?q=Pune%2C%20Maharashtra%2C%20India" target="_blank" rel="noreferrer">
+                    <svg><use href="#icon-location"></use></svg>
+                    <span><strong>Location</strong>Pune, Maharashtra</span>
+                </a>
+                <a href="tel:6000178511">
+                    <svg><use href="#icon-phone"></use></svg>
+                    <span><strong>Phone</strong>6000178511</span>
+                </a>
+                <a href="mailto:supriyodhar3S@gmail.com">
+                    <svg><use href="#icon-mail"></use></svg>
+                    <span><strong>Email</strong>supriyodhar3S@gmail.com</span>
+                </a>
+                <a href="https://www.linkedin.com/in/supriyo-dhar-031a6920a/" target="_blank" rel="noreferrer">
+                    <svg><use href="#icon-linkedin"></use></svg>
+                    <span><strong>LinkedIn</strong>linkedin.com/in/supriyo-dhar-031a6920a</span>
+                </a>
+                <a href="https://github.com/supriyo34" target="_blank" rel="noreferrer">
+                    <svg><use href="#icon-github"></use></svg>
+                    <span><strong>GitHub</strong>github.com/supriyo34</span>
+                </a>
+                <a href="https://leetcode.com/u/supriyodhar35/" target="_blank" rel="noreferrer">
+                    <svg><use href="#icon-leetcode"></use></svg>
+                    <span><strong>LeetCode</strong>leetcode.com/u/supriyodhar35</span>
+                </a>
+            </div>
+        </div>
+
+        <form class="contact-form reveal" data-contact-form>
+            <label>
+                <span>Your Name</span>
+                <input type="text" name="name" autocomplete="name" required />
+            </label>
+            <label>
+                <span>Subject</span>
+                <input type="text" name="subject" required />
+            </label>
+            <label>
+                <span>Your Message</span>
+                <textarea name="message" rows="5" required></textarea>
+            </label>
+            <button class="btn btn-primary" type="submit">
+                Send Message
+                <svg><use href="#icon-send"></use></svg>
+            </button>
+            <p class="form-status" aria-live="polite" data-form-status></p>
+        </form>
+
+        <div class="paper-plane reveal" aria-hidden="true">
+            <svg viewBox="0 0 180 180">
+                <path d="M150 24 26 85l48 16 18 52Z" />
+                <path d="m74 101 76-77-58 129Z" />
+                <path d="M26 85 92 153" />
+            </svg>
+        </div>
+    </div>
+</section>
+
+<footer class="site-footer">
+    <div class="container footer-grid">
+        <p>&copy; 2026 Supriyo Dhar. All rights reserved.</p>
+        <p>Built with ASP.NET Core MVC</p>
+    </div>
+</footer>
