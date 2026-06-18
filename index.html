@@ -1,8 +1,46 @@
-@{
-    ViewData["Title"] = "Portfolio";
-}
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Portfolio of Supriyo Dhar, Full Stack Software Developer." />
+    <title>Portfolio - Supriyo Dhar</title>
+    <link rel="stylesheet" href="css/site.css" />
+</head>
+<body>
+    <header class="site-header" data-site-header>
+        <nav class="site-nav" aria-label="Primary navigation">
+            <a class="brand" href="#home" aria-label="Supriyo Dhar home">
+                <span>Supriyo</span><span>Dhar</span>
+            </a>
 
-<svg class="icon-sprite" aria-hidden="true">
+            <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-menu" data-nav-toggle>
+                <span class="sr-only">Toggle navigation</span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <div class="nav-links" id="primary-menu" data-nav-menu>
+                <a href="#home" class="nav-link is-active">Home</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#education" class="nav-link">Education</a>
+                <a href="#experience" class="nav-link">Experience</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#awards" class="nav-link">Awards</a>
+                <a href="#contact" class="nav-link">Contact</a>
+                <button class="theme-toggle" type="button" aria-label="Toggle theme" data-theme-toggle>
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M20.6 14.5A7.4 7.4 0 0 1 9.5 3.4 8.9 8.9 0 1 0 20.6 14.5Z" />
+                    </svg>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main role="main">
+        <svg class="icon-sprite" aria-hidden="true">
     <symbol id="icon-download" viewBox="0 0 24 24">
         <path d="M12 3v11m0 0 4-4m-4 4-4-4M5 17v2a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-2" />
     </symbol>
@@ -128,7 +166,7 @@
         <div class="hero-visual reveal" aria-label="Portrait and portfolio statistics">
             <div class="portrait-card">
                 <span class="experience-badge"><strong>2+</strong>Years<br />Experience</span>
-                <img src="~/img/supriyo-dhar.png" asp-append-version="true" alt="Supriyo Dhar" />
+                <img src="img/supriyo-dhar.png"  alt="Supriyo Dhar" />
                 <div class="stat-strip">
                     <span><strong>20+</strong>Projects</span>
                     <span><strong>2+</strong>Years Exp.</span>
@@ -191,7 +229,7 @@
             </div>
 
             <div class="about-photo reveal">
-                <img src="~/img/supriyo-dhar.png" asp-append-version="true" alt="Supriyo Dhar portrait" />
+                <img src="img/supriyo-dhar.png"  alt="Supriyo Dhar portrait" />
             </div>
         </div>
 
@@ -397,7 +435,7 @@
                 <h3>Citation for Notable Contribution - Digital Transformation and Operational Excellence</h3>
                 <p class="muted">Holtec International, Dec 2025</p>
                 <p>Recognized for ownership, problem-solving, continuous learning, and development of practical software solutions that support quality, inventory, operational workflows, transparency, and digital transformation.</p>
-                <a class="award-link" href="@Url.Content("~/files/citation-notable-contribution-supriyo-dhar.pdf")" target="_blank" rel="noreferrer">
+                <a class="award-link" href="files/citation-notable-contribution-supriyo-dhar.pdf" target="_blank" rel="noreferrer">
                     <svg><use href="#icon-download"></use></svg>
                     View Citation PDF
                 </a>
@@ -492,9 +530,17 @@
     </div>
 </section>
 
-<footer class="site-footer"> 
+<footer class="site-footer">
     <div class="container footer-grid">
         <p>&copy; 2026 Supriyo Dhar. All rights reserved.</p>
         <p>Built with ASP.NET Core MVC</p>
     </div>
 </footer>
+
+    </main>
+
+    <script src="js/site.js"></script>
+</body>
+</html>
+
+
